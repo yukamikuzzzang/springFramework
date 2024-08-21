@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Number" class ="ch03_test2.Number"/>
+    <bean id="NumberOne" class ="ch03_test2.NumberOne"/>
+    <bean id="NumberTwo" class ="ch03_test2.NumberTwo"/>
+
+    <bean id="language" class="ch03_test2.Language" >
+        <constructor-arg  ref="Number"/>
+        <constructor-arg  ref="NumberOne"/>
+        <constructor-arg  ref="NumberTwo"/>
+    </bean>
+</beans>
