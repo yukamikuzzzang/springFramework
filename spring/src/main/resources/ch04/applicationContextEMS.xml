@@ -186,12 +186,12 @@
         <!-- administrator Map 초기화 -->
         <property name="administrators">
             <map>
-                <entry>
+                <!--<entry>
                     <key>
                         <value>Cheney</value>
                     </key>
                     <value>cheney@springPjt.org</value>
-                </entry>
+                </entry>-->
                 <entry key="Cheney" value="cheney@springPjt.org"/>
             </map>
         </property>

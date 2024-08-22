@@ -21,22 +21,15 @@ public class PrintStudentInformationService {
 
         while(iterator.hasNext()){
             String key = iterator.next();
-
-
-
-
-
-
-
-
             Student student = allStudent.get(key);
-            System.out.println("sNum:"+student.getSNum());
-            System.out.println("sId:"+student.getSId());
-            System.out.println("sPw:"+student.getSPw());
-            System.out.println("sName:"+student.getSName());
-            System.out.println("sAge:"+student.getSAge());
-            System.out.println("sGender:"+student.getSGender());
-            System.out.println("sMajor:"+student.getSMajor());
+
+            System.out.print("sNum: "+student.getSNum()+"\t");
+            System.out.print("sId: "+student.getSId()+"\t");
+            System.out.print("sPw: "+student.getSPw()+"\t");
+            System.out.print("sName: "+student.getSName()+"\t");
+            System.out.print("sAge: "+student.getSAge()+"\t");
+            System.out.print("sGender: "+student.getSGender()+"\t");
+            System.out.print("sMajor: "+student.getSMajor()+"\n");
         }
         System.out.println("END -----------------------");
     }

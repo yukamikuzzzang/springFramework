@@ -43,13 +43,13 @@ public class MainClass {
         Student selectStudent = selectService.select("hbs006");
 
         System.out.println("STUDENT START ------------------------------------");
-        System.out.println("sNum:" + selectStudent.getSNum() + "\t");
-        System.out.println("sId:" + selectStudent.getSId() + "\t");
-        System.out.println("sPws:" + selectStudent.getSPw() + "\t");
-        System.out.println("sName:" + selectStudent.getSName() + "\t");
-        System.out.println("sAge:" + selectStudent.getSAge() + "\t");
-        System.out.println("sGender:" + selectStudent.getSGender() + "\t");
-        System.out.println("sMajor:" + selectStudent.getSMajor() + "\t");
+        System.out.print("sNum:" + selectStudent.getSNum() + "\t");
+        System.out.print("sId:" + selectStudent.getSId() + "\t");
+        System.out.print("sPws:" + selectStudent.getSPw() + "\t");
+        System.out.print("sName:" + selectStudent.getSName() + "\t");
+        System.out.print("sAge:" + selectStudent.getSAge() + "\t");
+        System.out.print("sGender:" + selectStudent.getSGender() + "\t");
+        System.out.print("sMajor:" + selectStudent.getSMajor()+"\n");
         System.out.println("END ----------------------------------------------");
 
         //학생 수정
