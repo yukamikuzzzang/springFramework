@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath:ch04/appCtx2.xml"/>
+    <import resource="classpath:ch04/appCtx3.xml"/>
+
+    <bean id="initSampleData" class="ch04.utils.InitSampleData">
+        <!-- sNums 필드 초기화 -->
+        <property name="nums">
+            <array>
+                <value>hbs001</value>
+                <value>hbs002</value>
+                <value>hbs003</value>
+                <value>hbs004</value>
+                <value>hbs005</value>
+            </array>
+        </property>
+
+        <!-- sIds 필드 초기화 -->
+        <property name="ids">
+            <array>
+                <value>rabbit</value>
+                <value>hippo</value>
+                <value>raccoon</value>
+                <value>elephant</value>
+                <value>lion</value>
+            </array>
+        </property>
+
+        <!-- sPws 필드 초기화 -->
+        <property name="pws">
+            <array>
+                <value>p0001</value>
+                <value>p0002</value>
+                <value>p0003</value>
+                <value>p0004</value>
+                <value>p0005</value>
+            </array>
+        </property>
+
+        <!-- sNames 초기화 -->
+        <property name="names">
+            <array>
+                <value>agatha</value>
+                <value>barbara</value>
+                <value>chris</value>
+                <value>doris</value>
+                <value>elva</value>
+            </array>
+        </property>
+
+        <!-- sAges 초기화 -->
+        <property name="ages">
+            <array>
+                <value>19</value>
+                <value>22</value>
+                <value>20</value>
+                <value>27</value>
+                <value>19</value>
+            </array>
+        </property>
+
+        <!-- sGenders 초기화 -->
+        <property name="genders">
+            <array>
+                <value>W</value>
+                <value>W</value>
+                <value>W</value>
+                <value>M</value>
+                <value>M</value>
+            </array>
+        </property>
+
+        <!-- sMajor 초기화 -->
+        <property name="majors">
+            <array>
+                <value>English</value>
+                <value>Korean</value>
+                <value>French</value>
+                <value>Philosophy</value>
+                <value>History</value>
+            </array>
+        </property>
+    </bean>
+    <!-- studentDao 빈 생성 -->
+    <bean id="studentDao" class="ch04.dao.StudentDao"/>
+
+    <!-- studentRegisterService 빈 생성-->
+    <bean id="studentRegisterService" class="ch04.service.StudentRegisterService">
+        <constructor-arg ref="studentDao"/>
+    </bean>
+
+    <!-- studentModifyService 빈 생성 -->
+    <bean id="studentModifyService" class="ch04.service.StudentModifyService">
+        <constructor-arg ref="studentDao"/>
+    </bean>
+
+    <!-- studentDeleteService 빈 생성 -->
+    <bean id="studentDeleteService" class="ch04.service.StudentDeleteService">
+        <constructor-arg ref="studentDao"/>
+    </bean>
+
+    <!-- studentSelectService 빈 생성 -->
+    <bean id="studentSelectService" class="ch04.service.StudentSelectService">
+        <constructor-arg ref="studentDao"/>
+    </bean>
+
+    <!-- studentAllSelectService 빈 생성 -->
+    <bean id="studentAllSelectService" class="ch04.service.StudentAllSelectService">
+        <constructor-arg ref="studentDao"/>
+    </bean>
+
+    <!-- printStudentInformationService 빈 생성 -->
+    <bean id="printStudentInformationService" class="ch04.service.PrintStudentInformationService">
+        <constructor-arg ref="studentAllSelectService"/>
+    </bean>
+</beans>
+
+

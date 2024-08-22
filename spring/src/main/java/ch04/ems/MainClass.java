@@ -7,13 +7,10 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class MainClass {
     public static void main(String[] args) {
-        String[] appCtxs = {"classpath:ch04/appCtx1.xml", "classpath:ch04/appCtx2.xml",
-                "classpath:ch04/appCtx3.xml"};
-
         //IoC 컨테이너에서 생성
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(
                 //"classpath:ch04/applicationContextEMS.xml"
-                appCtxs
+                "classpath:ch04/appCtxImport.xml"
         );
 
         //샘플 데이터
