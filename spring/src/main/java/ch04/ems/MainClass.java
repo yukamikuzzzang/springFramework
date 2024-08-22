@@ -7,9 +7,13 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class MainClass {
     public static void main(String[] args) {
+        String[] appCtxs = {"classpath:ch04/appCtx1.xml", "classpath:ch04/appCtx2.xml",
+                "classpath:ch04/appCtx3.xml"};
+
         //IoC 컨테이너에서 생성
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(
-                "classpath:ch04/applicationContextEMS.xml"
+                //"classpath:ch04/applicationContextEMS.xml"
+                appCtxs
         );
 
         //샘플 데이터
@@ -49,7 +53,7 @@ public class MainClass {
         System.out.print("sName:" + selectStudent.getSName() + "\t");
         System.out.print("sAge:" + selectStudent.getSAge() + "\t");
         System.out.print("sGender:" + selectStudent.getSGender() + "\t");
-        System.out.print("sMajor:" + selectStudent.getSMajor()+"\n");
+        System.out.print("sMajor:" + selectStudent.getSMajor() + "\n");
         System.out.println("END ----------------------------------------------");
 
         //학생 수정
@@ -65,7 +69,7 @@ public class MainClass {
         printStudentInformationService.printStudentInfo(); //학생 리스트
 
         //시스템 정보
-        EMSInformationService emsInformationService = ctx.getBean("eMsInformationService",EMSInformationService.class);
+        EMSInformationService emsInformationService = ctx.getBean("eMsInformationService", EMSInformationService.class);
         emsInformationService.printEMSInformation();
 
         ctx.close();
