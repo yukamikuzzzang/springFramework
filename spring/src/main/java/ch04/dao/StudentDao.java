@@ -13,8 +13,7 @@ public class StudentDao {
     }
 
     public void update(Student student) {
-        studentDB.put(student.getSNum(), student);
-    }
+        studentDB.put(student.getSNum(), student);}//?
 
     public void insert(Student student) {
         studentDB.put(student.getSNum(), student);
