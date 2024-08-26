@@ -8,11 +8,13 @@ public class ContactRegisterService {
 
     public ContactRegisterService(ContactDao contactDao) {
         this.contactDao = contactDao;
+        //test
+        System.out.println("contactDao: " + contactDao);
     }
 
-    public void register(ContactSet contactSet){
+    public void register(ContactSet contactSet) {
         String name = contactSet.getName();
-        if(verify(name)) {
+        if (verify(name)) {
             contactDao.insert(contactSet);
         } else {
             System.out.println("The name has already registered.");
