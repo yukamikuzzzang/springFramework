@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sampleInitData" class="ch04_test.SampleInitData"/>
+
+    <bean id="memberDao" class="ch04_test.dao.MemberDao"/>
+
+
+    <bean id="insertMemberService" class="ch04_test.service.InsertMemberService">
+        <constructor-arg ref="memberDao"/>
+    </bean>
+
+    <bean id="updateMemberService" class="ch04_test.service.UpdateMemberService">
+        <constructor-arg ref="memberDao"/>
+    </bean>
+
+    <bean id="deleteMemberService" class="ch04_test.service.DeleteMemberService">
+        <constructor-arg ref="memberDao"/>
+    </bean>
+
+    <bean id="selectMemberService" class="ch04_test.service.SelectMemberService">
+        <constructor-arg ref="memberDao"/>
+    </bean>
+    <bean id="printMemberInformation" class="ch04_test.service.PrintMemberInformation">
+        <constructor-arg ref="selectAllMemberService"/>
+    </bean>
+
+    <bean id="selectAllMemberService" class="ch04_test.service.SelectAllMemberService">
+        <constructor-arg ref="memberDao"/>
+    </bean>
+
+
+</beans>
