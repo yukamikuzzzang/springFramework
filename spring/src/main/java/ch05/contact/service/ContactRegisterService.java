@@ -8,8 +8,6 @@ public class ContactRegisterService {
 
     public ContactRegisterService(ContactDao contactDao) {
         this.contactDao = contactDao;
-        //test
-        System.out.println("contactDao: " + contactDao);
     }
 
     public void register(ContactSet contactSet) {

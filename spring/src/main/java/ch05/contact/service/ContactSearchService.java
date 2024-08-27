@@ -8,8 +8,6 @@ public class ContactSearchService {
 
     public ContactSearchService(ContactDao contactDao) {
         this.contactDao = contactDao;
-        //test
-        System.out.println("contactDao: " + contactDao);
     }
 
     public ContactSet searchContact(String name) {
