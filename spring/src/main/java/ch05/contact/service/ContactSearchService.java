@@ -5,18 +5,18 @@ import ch05.contact.dao.ContactDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ContactSearchService {
+    @Autowired
     private ContactDao contactDao;
 
     public ContactSearchService(){
         System.out.println("default constructor");
     }
 
-
-    @Autowired
-    public ContactSearchService(ContactDao contactDao) {
-        System.out.println("contactDao = " + contactDao); // contactDao 출력
-        this.contactDao = contactDao;
-    }
+//    @Autowired
+//    public ContactSearchService(ContactDao contactDao) {
+//        System.out.println("contactDao = " + contactDao); // contactDao 출력
+//        this.contactDao = contactDao;
+//    }
 
     public ContactSet searchContact(String name) {
         if (verify(name)) {
