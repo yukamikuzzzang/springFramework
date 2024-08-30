@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 
 public class ContactRegisterService {
-    @Resource
+    //@Resource
     private ContactDao contactDao;
 //    @Autowired
 //    private ContactDao contactDao;
@@ -22,6 +22,7 @@ public class ContactRegisterService {
 //    }
 
    //@Autowired
+    @Resource
     public void setContactDao(ContactDao contactDao){
         this.contactDao = contactDao;
     }
