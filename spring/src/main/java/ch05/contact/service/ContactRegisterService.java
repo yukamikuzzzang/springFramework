@@ -4,8 +4,11 @@ import ch05.contact.ContactSet;
 import ch05.contact.dao.ContactDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
+
 
 public class ContactRegisterService {
+    @Resource
     private ContactDao contactDao;
 //    @Autowired
 //    private ContactDao contactDao;
@@ -18,7 +21,7 @@ public class ContactRegisterService {
 //        this.contactDao = contactDao;
 //    }
 
-   @Autowired
+   //@Autowired
     public void setContactDao(ContactDao contactDao){
         this.contactDao = contactDao;
     }

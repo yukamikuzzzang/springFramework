@@ -4,7 +4,10 @@ import ch05.contact.ContactSet;
 import ch05.contact.dao.ContactDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
+
 public class ContactSearchService {
+    @Resource
     private ContactDao contactDao;
 //    public ContactSearchService(){
 //        System.out.println("default constructor");
