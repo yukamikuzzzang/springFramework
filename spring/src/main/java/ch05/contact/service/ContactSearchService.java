@@ -17,7 +17,7 @@ public class ContactSearchService {
 //        System.out.println("contactDao = " + contactDao); // contactDao 출력
 //        this.contactDao = contactDao;
 //    }
-    @Autowired
+    //@Autowired
     public ContactSearchService(ContactDao contactDao) {
         this.contactDao = contactDao;
     }
