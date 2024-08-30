@@ -3,18 +3,16 @@ package ch05.contact.service;
 import ch05.contact.ContactSet;
 import ch05.contact.dao.ContactDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.annotation.Resource;
 
 
 public class ContactRegisterService {
-    //@Resource
+    @Resource
+    @Qualifier("usedDao")
     private ContactDao contactDao;
-//    @Autowired
-//    private ContactDao contactDao;
-//    public ContactRegisterService(){
-//        System.out.println("default constructor");
-//    }
+
 //    @Autowired
 //    public ContactRegisterService(ContactDao contactDao) {
 //        System.out.println("contactDao = " + contactDao); //contactDao 출력
@@ -22,7 +20,6 @@ public class ContactRegisterService {
 //    }
 
    //@Autowired
-    @Resource
     public void setContactDao(ContactDao contactDao){
         this.contactDao = contactDao;
     }
