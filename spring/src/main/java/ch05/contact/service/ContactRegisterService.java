@@ -9,8 +9,9 @@ import javax.annotation.Resource;
 
 
 public class ContactRegisterService {
-    @Resource
-    @Qualifier("usedDao")
+    /*@Resource
+    @Qualifier("usedDao")*/
+    @Autowired
     private ContactDao contactDao;
 
 //    @Autowired

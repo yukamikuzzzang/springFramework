@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import javax.annotation.Resource;
 
 public class ContactSearchService {
+    /*@Autowired
+    @Qualifier("usedDao")*/
     @Autowired
-    @Qualifier("usedDao")
     private ContactDao contactDao;
 
 //    @Autowired

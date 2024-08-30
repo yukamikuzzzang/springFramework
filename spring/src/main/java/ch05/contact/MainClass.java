@@ -1,7 +1,6 @@
 package ch05.contact;
 
-import ch05.contact.service.ContactRegisterService;
-import ch05.contact.service.ContactSearchService;
+import ch05.contact.service.*;
 import ch05.contact.utils.InitSampleData;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -37,6 +36,16 @@ public class MainClass {
         contactSet = searchService.searchContact("김연경");
         System.out.println("name: " + contactSet.getName());
         System.out.println("phoneNumbers = " + contactSet.getPhoneNumber());
+
+        //
+        FirstBean firstBean = context.getBean("firstBean1",FirstBean.class);
+        SecondBean secondBean = context.getBean("secondBean",SecondBean.class);
+        ThirdBean thirdBean = context.getBean("thirdBean", ThirdBean.class);
+        FourthBean fourthBean = context.getBean("fourthBean1",FourthBean.class);
+
+        AutoWiredEx autoWiredEx = new AutoWiredEx(firstBean,secondBean);
+        autoWiredEx.autowiredMethod(thirdBean,fourthBean);
+
 
         context.close();
     }
