@@ -3,11 +3,13 @@ package ch05.contact.service;
 import ch05.contact.ContactSet;
 import ch05.contact.dao.ContactDao;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class ContactSearchService {
     private ContactDao contactDao;
 
     @Inject
+    @Named("contactDao1")
     public void setContactDao(ContactDao contactDao) {
         this.contactDao = contactDao;
     }
