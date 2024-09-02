@@ -10,11 +10,6 @@ public class ContactSearchService {
     @Named("contactDao1")
     private ContactDao contactDao;
 
-    public ContactSearchService(ContactDao contactDao){
-        this.contactDao = contactDao;
-    }
-
-
     public void setContactDao(ContactDao contactDao) {
         this.contactDao = contactDao;
     }

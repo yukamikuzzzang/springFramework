@@ -11,10 +11,6 @@ public class ContactRegisterService {
     @Named("contactDao1")
     private ContactDao contactDao;
 
-    public ContactRegisterService(ContactDao contactDao){
-        this.contactDao = contactDao;
-    }
-
     public void setContactDao(ContactDao contactDao){
         this.contactDao = contactDao;
     }
