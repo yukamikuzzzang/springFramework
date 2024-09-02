@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 public class ContactRegisterService {
     /*@Resource
     @Qualifier("usedDao")*/
-    @Autowired
+    @Autowired(required = false)
     private ContactDao contactDao;
 
 //    @Autowired
