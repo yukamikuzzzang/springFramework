@@ -1,16 +1,16 @@
-package ch04.ems;
+package ch06.ems;
 
-import ch04.member.Student;
-import ch04.service.*;
-import ch04.utils.InitSampleData;
+import ch06.member.Student;
+import ch06.service.*;
+import ch06.service.*;
+import ch06.utils.InitSampleData;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class MainClass {
     public static void main(String[] args) {
         //IoC 컨테이너에서 생성
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext(
-                //"classpath:ch04/applicationContextEMS.xml"
-                "classpath:ch04/appCtxImport.xml"
+                "classpath:ch06/applicationContextEMS.xml"
         );
 
         //샘플 데이터
@@ -53,7 +53,7 @@ public class MainClass {
         System.out.print("sMajor:" + selectStudent.getSMajor() + "\n");
         System.out.println("END ----------------------------------------------");
 
-        /*//학생 수정
+        //학생 수정
         StudentModifyService modifyService = ctx.getBean("studentModifyService", StudentModifyService.class);
         modifyService.modify(new Student("hbs006", "pig", "p0066", "melisa", 27, 'w', "Computer"));
 
