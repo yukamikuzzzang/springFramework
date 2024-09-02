@@ -2,25 +2,13 @@ package ch05.contact.service;
 
 import ch05.contact.ContactSet;
 import ch05.contact.dao.ContactDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-
-import javax.annotation.Resource;
+import javax.inject.Inject;
 
 
 public class ContactRegisterService {
-    /*@Resource
-    @Qualifier("usedDao")*/
-    @Autowired(required = false)
+    @Inject
     private ContactDao contactDao;
 
-//    @Autowired
-//    public ContactRegisterService(ContactDao contactDao) {
-//        System.out.println("contactDao = " + contactDao); //contactDao 출력
-//        this.contactDao = contactDao;
-//    }
-
-   //@Autowired
     public void setContactDao(ContactDao contactDao){
         this.contactDao = contactDao;
     }

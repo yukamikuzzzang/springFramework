@@ -26,7 +26,7 @@
         </property>
     </bean>
 
-   <!-- <bean id="contactDao" class="ch05.contact.dao.ContactDao" /> -->
+   <bean id="contactDao" class="ch05.contact.dao.ContactDao" />
 
     <bean id="registerService" class="ch05.contact.service.ContactRegisterService"/>
     <bean id="searchService" class="ch05.contact.service.ContactSearchService"/>
@@ -47,6 +47,7 @@
     <bean id="fourthBean3" class="ch05.contact.service.FourthBean"/>
 
     <bean id="autoWiredEx" class="ch05.contact.service.AutoWiredEx"/>
+
 </beans>
 
 
