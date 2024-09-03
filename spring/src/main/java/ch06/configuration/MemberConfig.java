@@ -93,7 +93,7 @@ public class MemberConfig {
     }
 
     @Bean
-    public EMSInformationService eMsInforMationService(){
+    public EMSInformationService eMsInformationService(){
         EMSInformationService emsInformationService = new EMSInformationService();
         emsInformationService.setInfo("Education Management System program was developed by 2022.");
         emsInformationService.setCopyRight("COPYRIGHT(C) 2022 EMS CO., LTD.");
